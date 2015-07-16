@@ -10,6 +10,10 @@
     <packaging>jar</packaging>
     <name>Synth as a Service</name>
 
+    <properties>
+        <jetty.version>9.2.1.v20140609</jetty.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -47,6 +51,17 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+
         <!-- Test Dependencies -->
         <dependency>
             <groupId>junit</groupId>
